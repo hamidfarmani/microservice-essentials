@@ -1,0 +1,42 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### VS Code ###
+.vscode/
+
+### Application Properties ###
+src/main/resources/application-*.yml
+src/main/resources/application-*.properties
+!src/main/resources/application.yml
+!src/main/resources/application.properties
+
+### Configuration Files ###
+src/main/resources/configurations/*-dev.yml
+src/main/resources/configurations/*-prod.yml
+src/main/resources/configurations/secrets/
+
+### Logs ###
+*.log
+logs/
+
+### Security ###
+src/main/resources/keystore/
+*.jks
+*.p12

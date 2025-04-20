@@ -1,0 +1,29 @@
+server:
+  port: 9898
+
+spring:
+  application:
+    name: AUTH-SERVICE
+  cloud:
+    discovery:
+      enabled: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/microservice_essentials
+    username: myuser
+    password: mypass
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+jwt:
+  secret: RhXaBqc61BPR096ne9wKakicROyahRodnC2fLvmz6iLVxXOfHsM3fYiCWz0eLTRU
