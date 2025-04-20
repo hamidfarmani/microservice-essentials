@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "postId": 1,
+    "content": "Great article about microservices! I especially liked the part about service discovery. Have you considered covering service mesh in a future post?",
+    "author": "Alice Johnson",
+    "createdAt": "2024-03-15T08:30:00Z",
+    "updatedAt": "2024-03-15T08:30:00Z"
+  },
+  {
+    "id": 2,
+    "postId": 1,
+    "content": "I've implemented similar patterns in my project. One challenge we faced was handling distributed transactions. Would love to hear your thoughts on that.",
+    "author": "Bob Smith",
+    "createdAt": "2024-03-15T09:15:00Z",
+    "updatedAt": "2024-03-15T09:15:00Z"
+  },
+  {
+    "id": 3,
+    "postId": 1,
+    "content": "@Bob Smith - For distributed transactions, we've had success with the Saga pattern. Happy to share our experience if you're interested.",
+    "author": "Charlie Davis",
+    "createdAt": "2024-03-15T10:20:00Z",
+    "updatedAt": "2024-03-15T10:20:00Z"
+  },
+  {
+    "id": 4,
+    "postId": 2,
+    "content": "Your Spring Security tutorial was exactly what I needed! The JWT implementation examples are very clear and practical.",
+    "author": "Diana Wilson",
+    "createdAt": "2024-03-16T14:25:00Z",
+    "updatedAt": "2024-03-16T14:25:00Z"
+  },
+  {
+    "id": 5,
+    "postId": 2,
+    "content": "Quick question - how would you handle token refresh in a microservices architecture? Do you recommend storing refresh tokens in a separate service?",
+    "author": "Eva Martinez",
+    "createdAt": "2024-03-16T15:30:00Z",
+    "updatedAt": "2024-03-16T15:30:00Z"
+  },
+  {
+    "id": 6,
+    "postId": 3,
+    "content": "The comparison between different message brokers was super helpful! We're currently using RabbitMQ but considering Kafka for certain use cases.",
+    "author": "Frank Anderson",
+    "createdAt": "2024-03-17T11:45:00Z",
+    "updatedAt": "2024-03-17T11:45:00Z"
+  },
+  {
+    "id": 7,
+    "postId": 3,
+    "content": "Have you done any performance testing between RabbitMQ and Kafka? Would be interesting to see the numbers for different scenarios.",
+    "author": "Grace Lee",
+    "createdAt": "2024-03-17T12:10:00Z",
+    "updatedAt": "2024-03-17T12:10:00Z"
+  },
+  {
+    "id": 8,
+    "postId": 4,
+    "content": "The Docker optimization tips are gold! Reduced our image size by 60% following these guidelines.",
+    "author": "Henry Ford",
+    "createdAt": "2024-03-18T09:20:00Z",
+    "updatedAt": "2024-03-18T09:20:00Z"
+  },
+  {
+    "id": 9,
+    "postId": 4,
+    "content": "Multi-stage builds made a huge difference for us too. Any thoughts on using distroless base images?",
+    "author": "Isabella Kim",
+    "createdAt": "2024-03-18T10:15:00Z",
+    "updatedAt": "2024-03-18T10:15:00Z"
+  },
+  {
+    "id": 10,
+    "postId": 5,
+    "content": "Your explanation of reactive programming with Project Reactor really cleared things up for me. The marble diagrams were particularly helpful!",
+    "author": "Jack Thompson",
+    "createdAt": "2024-03-19T13:40:00Z",
+    "updatedAt": "2024-03-19T13:40:00Z"
+  },
+  {
+    "id": 11,
+    "postId": 5,
+    "content": "Could you elaborate on backpressure handling in reactive streams? That's one area I'm still trying to wrap my head around.",
+    "author": "Kelly Brown",
+    "createdAt": "2024-03-19T14:30:00Z",
+    "updatedAt": "2024-03-19T14:30:00Z"
+  },
+  {
+    "id": 12,
+    "postId": 5,
+    "content": "@Kelly - Check out the section on Flux.onBackpressure* operators. They're game-changers for handling backpressure scenarios.",
+    "author": "Jack Thompson",
+    "createdAt": "2024-03-19T15:05:00Z",
+    "updatedAt": "2024-03-19T15:05:00Z"
+  }
+]
