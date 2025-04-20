@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "836b5f7e-fac3-41b1-931b-48daea8ffb3a",
+		"name": "Microservice Essentials",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2611100"
+	},
+	"item": [
+		{
+			"name": "Circuit breakers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "JSESSIONID=974925E68D8C5EA639F6ACA16F6BF96C"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/actuator/circuitbreakers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"circuitbreakers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "notifications from comments",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJIYW1pZCIsImlhdCI6MTc0NTE1MDc0OCwiZXhwIjoxNzQ1MjM3MTQ4fQ.PdzX2dIoOeaCfG-mbjFS-j92qlvrIGwAy30LBlGsb55kaFebq677gOe0Yt2zuPFs"
+					},
+					{
+						"key": "Cookie",
+						"value": "JSESSIONID=7CE91EE75A65277C0DCB6C5736C5DF5D; JSESSIONID=974925E68D8C5EA639F6ACA16F6BF96C"
+					},
+					{
+						"key": "Content-Type",
+						"value": "text/plain"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "This is a notificationa",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/comments/notification",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comments",
+						"notification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "notifications",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJIYW1pZCIsImlhdCI6MTc0NTE1MDc0OCwiZXhwIjoxNzQ1MjM3MTQ4fQ.PdzX2dIoOeaCfG-mbjFS-j92qlvrIGwAy30LBlGsb55kaFebq677gOe0Yt2zuPFs"
+					},
+					{
+						"key": "Cookie",
+						"value": "JSESSIONID=7CE91EE75A65277C0DCB6C5736C5DF5D; JSESSIONID=974925E68D8C5EA639F6ACA16F6BF96C"
+					},
+					{
+						"key": "Content-Type",
+						"value": "text/plain"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "testingd",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/notifications/send",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notifications",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "comments",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJIYW1pZCIsImlhdCI6MTc0NTE1MDc0OCwiZXhwIjoxNzQ1MjM3MTQ4fQ.PdzX2dIoOeaCfG-mbjFS-j92qlvrIGwAy30LBlGsb55kaFebq677gOe0Yt2zuPFs"
+					},
+					{
+						"key": "Cookie",
+						"value": "JSESSIONID=7CE91EE75A65277C0DCB6C5736C5DF5D; JSESSIONID=974925E68D8C5EA639F6ACA16F6BF96C"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/comments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Cookie",
+						"value": "JSESSIONID=7CE91EE75A65277C0DCB6C5736C5DF5D; JSESSIONID=974925E68D8C5EA639F6ACA16F6BF96C"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"hamidfarmani\",\n    \"password\":\"Pwd1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Cookie",
+						"value": "JSESSIONID=7CE91EE75A65277C0DCB6C5736C5DF5D; JSESSIONID=974925E68D8C5EA639F6ACA16F6BF96C"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"full_name\":\"Hamid Farmani\",\n    \"username\":\"hamid\",\n    \"password\":\"Pwd1\",\n    \"email\":\"hamidfarmani1@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
