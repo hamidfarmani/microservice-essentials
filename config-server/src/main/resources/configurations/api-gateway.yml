@@ -1,9 +1,9 @@
 server:
-  port: 8080
+  port: ${PORT:8080}
 
 spring:
   application:
-    name: API-GATEWAY
+    name: api-gateway
   cloud:
     discovery:
       enabled: true
@@ -15,7 +15,7 @@ spring:
             fallbackUri: forward:/fallback
       routes:
         - id: comment-service
-          uri: lb://COMMENT-SERVICE
+          uri: lb://comment-service
           predicates:
             - Path=/comments/**
           filters:
@@ -33,7 +33,7 @@ spring:
                 key-resolver: "#{@userKeyResolver}"
 
         - id: auth-service
-          uri: lb://AUTH-SERVICE
+          uri: lb://auth-service
           predicates:
             - Path=/auth/**
           filters:
@@ -44,7 +44,7 @@ spring:
                 redis-rate-limiter.requestedTokens: 1
                 key-resolver: "#{@userKeyResolver}"
         - id: notification-service
-          uri: lb://NOTIFICATION-SERVICE
+          uri: lb://notification-service
           predicates:
             - Path=/notifications/**
           filters:
@@ -69,6 +69,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${random.uuid}
 
 jwt:
   secret: RhXaBqc61BPR096ne9wKakicROyahRodnC2fLvmz6iLVxXOfHsM3fYiCWz0eLTRU

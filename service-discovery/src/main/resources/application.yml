@@ -1,5 +1,21 @@
+server:
+  port: 8761
+
 spring:
-  config:
-    import: optional:configserver:http://localhost:8888
   application:
     name: service-discovery
+  cloud:
+    config:
+      enabled: false
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    wait-time-in-ms-when-sync-empty: 0
+    enable-self-preservation: false

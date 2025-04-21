@@ -1,16 +1,16 @@
 server:
-  port: 9898
+  port: ${PORT:9898}
 
 spring:
   application:
-    name: AUTH-SERVICE
+    name: auth-service
   cloud:
     discovery:
       enabled: true
   datasource:
     url: jdbc:postgresql://localhost:5432/microservice_essentials
-    username: myuser
-    password: mypass
+    username: myuser #${DB_USERNAME} should be from env variable
+    password: mypass #${DB_PASSWORD} should be from env variable
   jpa:
     hibernate:
       ddl-auto: update
@@ -24,6 +24,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${random.uuid}
 
 jwt:
-  secret: RhXaBqc61BPR096ne9wKakicROyahRodnC2fLvmz6iLVxXOfHsM3fYiCWz0eLTRU
+  secret: RhXaBqc61BPR096ne9wKakicROyahRodnC2fLvmz6iLVxXOfHsM3fYiCWz0eLTRU #${JWT_SECRET} #should be from env variable

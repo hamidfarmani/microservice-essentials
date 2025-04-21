@@ -8,7 +8,7 @@ import org.springframework.web.client.RestClient;
 @Configuration
 public class NotificationClientConfig {
 
-    private static final String NOTIFICATION_SERVICE = "NOTIFICATION-SERVICE";
+    private static final String NOTIFICATION_SERVICE = "notification-service";
 
     @Bean
     public RestClient.Builder notificationRestClientBuilder() {
